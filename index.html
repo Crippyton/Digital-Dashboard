@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Washington Luís - Crippyton">
+    <title>Digital Dashboard </title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link type="image/png" sizes="16x16" rel="icon" href="/pubic/icons8-relógio-digital-windows-11-color-16.png"> 
+    <link type="image/png" sizes="32x32" rel="icon" href="/pubic/icons8-relógio-digital-windows-11-color-32.png"> 
+    <link type="image/png" sizes="96x96" rel="icon" href="/public/icons8-relógio-digital-windows-11-color-96.png">
+</head>
+<body>
+    <button class="toggle-theme-btn" id="toggle-theme" title="Alternar tema" data-tooltip="Alternar tema">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="main-wrapper">
+        <div class="top-row">
+            <div class="watch">
+                <div id="time">00:00:00</div>
+                <div id="date">Segunda-feira, 24 de Janeiro</div>
+            </div>
+            <div class="music-player" id="music-player">
+                <div class="music-info">
+                    <span id="music-title">Playlist do YouTube</span>
+                </div>
+                <button id="open-modal" class="add-playlist-btn" data-tooltip="Adicionar uma playlist do YouTube"><i class="fas fa-plus"></i> Adicionar Playlist</button>
+                <div id="playlist-embed-wrapper" class="full-embed" style="margin-top:10px;margin-bottom:10px;"></div>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquisar cidade..." id="search-input">
+                    <button onclick="searchWeather()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="loading" id="loading"></div>
+                <div class="error-message" id="error-message"></div>
+                <div class="weather-info" id="weather-info">
+                    <img src="src/img/clima2.png" alt="Clima" id="weather-icon" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'140\' height=\'140\'><circle cx=\'70\' cy=\'70\' r=\'60\' fill=\'%2300ffff\' opacity=\'0.2\'/><ellipse cx=\'70\' cy=\'90\' rx=\'50\' ry=\'30\' fill=\'%2300ffff\' opacity=\'0.4\'/></svg>'">
+                    <div class="temperature" id="temperature">--°C</div>
+                    <div class="location" id="location">Cidade, País</div>
+                    <div class="details">
+                        <div class="detail-item">
+                            <i class="fas fa-water"></i>
+                            <span>Umidade</span>
+                            <span id="humidity">--%</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span>Vento</span>
+                            <span id="wind">-- km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Condição</span>
+                            <span id="condition">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="calendar-navigation">
+                    <button id="prev-year" class="nav-button" data-tooltip="Ano anterior">◀◀ Ano</button>
+                    <button id="prev-month" class="nav-button" data-tooltip="Mês anterior">◀ Mês</button>
+                    <div class="calendar-header">
+                        <span id="current-month">Janeiro</span>
+                        <span id="current-year">2024</span>
+                    </div>
+                    <button id="next-month" class="nav-button" data-tooltip="Próximo mês">Mês ▶</button>
+                    <button id="next-year" class="nav-button" data-tooltip="Próximo ano">Ano ▶▶</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div class="calendar-weekday">Dom</div>
+                    <div class="calendar-weekday">Seg</div>
+                    <div class="calendar-weekday">Ter</div>
+                    <div class="calendar-weekday">Qua</div>
+                    <div class="calendar-weekday">Qui</div>
+                    <div class="calendar-weekday">Sex</div>
+                    <div class="calendar-weekday">Sáb</div>
+                </div>
+                <div id="calendar-days" class="calendar-grid"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="playlist-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <h2>Adicionar Playlist</h2>
+            <label for="playlist-embed">Embed do YouTube (iframe)</label>
+            <textarea id="playlist-embed" placeholder="Cole aqui o código embed do YouTube"></textarea>
+            <div class="modal-actions">
+                <button id="save-playlist" class="save-btn">Salvar</button>
+                <button id="close-modal" class="close-btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Crippyton. Todos os direitos reservados.</p>
+        <a href="https://github.com/Crippyton" target="_blank" class="github-link">
+            <i class="fab fa-github"></i> Ver mais projetos
+        </a>
+    </footer>
+    <script src="/src/js/scripts.js"></script>
+</body>
+</html>

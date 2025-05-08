@@ -30,12 +30,12 @@ Um aplicativo web moderno que combina um relógio digital, calendário, player d
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/WashingtonSilva/digital-watch-card.git
+git clone https://github.com/Crippyton/Digital-Dashboard.git
 ```
 
 2. Navegue até o diretório do projeto:
 ```bash
-cd digital-watch-card
+cd Digital-Dashboard
 ```
 
 3. Abra o arquivo `index.html` em seu navegador ou configure um servidor local.

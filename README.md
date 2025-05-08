@@ -1,3 +1,5 @@
+![Painel](/src/img/DigitalDashboard.png)
+
 # Relógio e Calendário Digital
 
 Um aplicativo web moderno que combina um relógio digital, calendário, player de música e previsão do tempo em uma interface elegante e responsiva.
@@ -103,7 +105,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👨‍💻 Autor
 
-- **Washington Silva**
+- **Washington Rocha**
   - GitHub: [@Crippyton](https://github.com/Crippyton)
 
 ## 🙏 Agradecimentos

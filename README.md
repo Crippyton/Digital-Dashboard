@@ -1,4 +1,4 @@
-![Painel](/src/img/DigitalDashboard.png)
+![Painel](/src/img/digitaldashboard.png)
 
 # Relógio e Calendário Digital
 

@@ -4,6 +4,10 @@
 
 Um aplicativo web moderno que combina um relógio digital, calendário, player de música e previsão do tempo em uma interface elegante e responsiva.
 
+## 🌐 Demo
+
+ - Acesse [Digital Dashboard](https://digitaldashboard.netlify.app/)🔗
+
 ## 🚀 Funcionalidades
 
 - **Relógio Digital**: Exibe hora e data atual em tempo real
